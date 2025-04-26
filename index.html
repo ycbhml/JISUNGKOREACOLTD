@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+<!--
+ *                        _oo0oo_
+ *                       o8888888o
+ *                       88" . "88
+ *                       (| -_- |)
+ *                       0\  =  /0
+ *                     ___/`---'\___
+ *                   .' \\|     |// '.
+ *                  / \\|||  :  |||// \
+ *                 / _||||| -:- |||||- \
+ *                |   | \\\  - /// |   |
+ *                | \_|  ''\---/''  |_/ |
+ *                \  .-\__  '-'  ___/-. /
+ *              ___'. .'  /--.--\  `. .'___
+ *           ."" '<  `.___\_<|>_/___.' >' "".
+ *          | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *          \  \ `_.   \_ __\ /__ _/   .-` /  /
+ *      =====`-.____`.___ \_____/___.-`___.-'=====
+ *                        `=---='
+ * 
+ * 
+ *      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * 
+ *            佛祖保佑       永不宕机     永无BUG
+ -->
+<head>
+    <!-- 设置网页的字符编码为 UTF-8，确保支持韩文、中文、英文等多语言字符显示。-->
+    <meta charset="UTF-8">
+
+    <!-- 设置响应式视图，适配不同设备宽度（如手机、平板、电脑）。width=device-width: 页面宽度随设备宽度变化；initial-scale=1.0: 初始缩放比例为 1-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 网页标题栏上显示的文字：“지성코리아”（公司名）-->
+    <title>지성코리아</title>
+
+    <!-- 设置网站图标，显示在浏览器标签页上-->
+    <link rel="icon" href="logo/logo.png" type="image/png">
+
+    <!-- 引入 CSS 样式文件，控制网页外观-->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- 引入 JS，控制网JS-->
+    <script src="index.js"></script>
+
+    <!-- 判断设备类型的 JavaScript 脚本-->
+    <!-- 监听网页加载完成后执行，判断窗口宽度是否小于等于 768px（常用移动设备宽度上限），给 <body> 标签加上对应的 class：mobile 或 desktop-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function isMobileDevice() {
+                return (window.innerWidth <= 768);
+            }
+
+            if (isMobileDevice()) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.add('desktop');
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <section class="fullscreen-bg"><!-- 背景 -->
+        <div class="slide-wrapper"><!-- 包裹背景图用于滑动切换的div -->
+            <div class="slide current"></div>
+            <div class="slide next"></div>
+        </div>
+
+        <header class="site-header"><!-- 头 -->
+            <div class="DaoHang"><!-- 导航栏 -->
+                <div class="logo-JiSungKorea"><!-- 导航栏左边 -->
+                    <img src="logo/logo.png" alt="지성코리아 로고" class="logo-img">
+                    <span class="Gongsi_name">지성코리아</span>
+                </div>
+
+                <nav class="Biaoqian"><!-- 导航栏右边 -->
+                    <ul>
+                        <li><a href="javascript:void(0);" onclick="window.scrollTo({ top: 1250, behavior: 'smooth' });">우리회사</a></li>
+                        <li><a href="#product">제품소개</a></li>
+                        <li><a href="#notice">공지사항</a></li>
+                        <li><a href="#contact">문의하기</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 左右切换按钮 -->
+        <button class="bg-btn left-btn">
+            <img src="background/Left_Buttom.png" alt="이전" class="arrow-img">
+        </button>
+        
+        <button class="bg-btn right-btn">
+            <img src="background/Right_Buttom.png" alt="다음" class="arrow-img">
+        </button>
+
+        <!-- 左右图片对应的文字 -->
+        <div class="text-wrapper">
+            <div class="slide-text" id="slideText">定位</div>
+        </div>
+
+        <!-- 图片进度条 -->
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progressText">1/3</div> <!-- 进度条后面的百分比 -->
+        </div>
+    </section>
+
+    <!--我们公司介绍 -->
+    <section class="about-section" id="about-section">
+        <div class="about-container">
+      
+          <!-- 左侧文字 -->
+          <div class="about-text">
+            <div class="title-box">
+              <div class="title-line"></div>
+              <div class="title-text">
+                <h2>우리회사</h2>
+                <p>About Us</p>
+              </div>
+            </div>
+            <p class="description">
+                지성코리아는 한국에 위치한 전문적인 뱀장어 수출입 기업입니다. 고품질의 뱀장어 제품을 한국시장에 공급하며, 안전하고 신뢰할 수 있는 수산물 유통 파트너로 자리 잡았습니다.<br><br>
+                다양한 글로벌 공급망과의 협업 및 업계 경험을 바탕으로 한국 내 뱀장어 수출의 핵심 연결고리로 성장하였으며, Google 등 글로벌 플랫폼에서도 쉽게 검색할 수 있는 신뢰받는 브랜드입니다.<br><br>
+                "정직 · 품질 · 효율"을 핵심 가치로 삼아, 고객에게 안정적이고 효율적인 수산물 유통 서비스를 제공합니다.
+            </p>
+          </div>
+      
+          <!-- 右侧图片 -->
+          <div class="about-image">
+            <img src="About_Us/us.png" alt="公司工厂">
+          </div>
+        </div>
+    </section>
+
+    <!--产业优势介绍 -->
+    <section class="industry-section">
+        <div class="industry-title">
+          <div class="title-line"></div>
+          <div class="title-text">
+            <h2>전 산업 밸류체인</h2>
+            <p>Our Industry Chain</p>
+          </div>
+        </div>
+      
+        <div class="industry-grid">
+          <!-- 第1项 -->
+          <div class="industry-card">
+            <img src="GoodShow5/Show1.png" alt="生态养殖">
+            <h3>천연 생태 양식</h3>
+            <p>무이산맥 산골샘에서 자란 생장어</p>
+          </div>
+      
+          <!-- 第2项 -->
+          <div class="industry-card">
+            <img src="GoodShow5/Show2.jpg" alt="研发体系">
+            <h3>미식 연구 개발 시스템</h3>
+            <p>국내외 베테랑 연구 개발 팀</p>
+          </div>
+      
+          <!-- 第3项 -->
+          <div class="industry-card">
+            <img src="GoodShow5/Show3.jpg" alt="加工能力">
+            <h3>생산 가공 능력</h3>
+            <p>세계 최고 수준의 기술 공정</p>
+          </div>
+      
+          <!-- 第4项 -->
+          <div class="industry-card">
+            <img src="GoodShow5/Show4.png" alt="品牌战略">
+            <h3>브랜드 가치 전략</h3>
+            <p>산업 브랜드 가치 전략</p>
+          </div>
+      
+          <!-- 第5项 -->
+          <div class="industry-card">
+            <img src="GoodShow5/Show5.jpg" alt="合作伙伴">
+            <h3>채널 협력 파트너</h3>
+            <p>글로벌 시장으로 수출 확대</p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="partner-showcase">
+        <h2>전략적 협력 파트너</h2>
+      
+        <div class="partner-row">
+          <!-- 公司A -->
+          <div class="partner-block">
+            <div class="partner-info">
+                <p class="partner-name">화농식품 한국지사</p>
+              <img src="Friend/Friend1.jpg" alt="华农食品 로고" class="partner-logo">
+            </div>
+            <div class="partner-image-wrapper">
+              <img src="Friend/Show1.png" alt="华农厂区" class="partner-photo">
+            </div>
+          </div>
+      
+          <!-- 公司B -->
+          <div class="partner-block">
+            <div class="partner-info">
+              <p class="partner-name">한덕식품 한국지사</p>
+              <img src="Friend/Friend2.jpg" alt="汉德食品 로고" class="partner-logo">
+            </div>
+            <div class="partner-image-wrapper">
+              <img src="Friend/Show2.png" alt="汉德厂区" class="partner-photo">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="platform-section">
+        <h2 class="platform-main-title">온라인 스토어</h2>
+      
+        <div class="platform-container">
+          <!-- Naver Smartstore -->
+          <a href="https://smartstore.naver.com/jisungkoreacoltd/category/50001878?cp=1" target="_blank" class="platform-link">
+            <img src="Link/Naver.png" alt="Naver Smart Store" class="platform-logo">
+          </a>
+      
+          <!-- Coupang -->
+          <a href="https://shop.coupang.com/A01278110?locale=ko_KR&platform=p" target="_blank" class="platform-link">
+            <img src="Link/Coupang.png" alt="Coupang" class="platform-logo">
+          </a>
+        </div>
+      </section>
+
+    <!-- 第二部分幻灯片 -->
+    <section class="second-slider">
+        <div class="second-slide-wrapper">
+          <div class="second-slide current">
+            <img src="PPT/slide1.png" class="second-img" />
+          </div>
+          <div class="second-slide next">
+            <img src="" class="second-img" />
+          </div>
+        </div>
+      
+        <div class="second-indicators">
+          <button class="indicator-btn" data-index="0">1</button>
+          <button class="indicator-btn" data-index="1">2</button>
+          <button class="indicator-btn" data-index="2">3</button>
+          <button class="indicator-btn" data-index="3">4</button>
+        </div>
+    </section>
+
+    <!-- 底部部分 -->
+    <footer>
+        <div class="dibu">
+            <p>&copy; 2024지성코리아</p>
+            <p>상호:지성코리아 | 대표자: 요지성 | 사업자 등록번호: 709-86-02846 </p>
+            <p>전화: 010-5053-2308 | 팩스: 0504-383-2308 | 주소:인천광역시 서구 청라한내로72번길7-31,A동219호</p>
+            <p>개인정보관리책임자: 요지성(jisungkoreacoltd@hotmail.com) | Contact: jisungkoreacoltd@hotmail.com for more information</p>
+            <p>Copyright © 지성코리아 All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
