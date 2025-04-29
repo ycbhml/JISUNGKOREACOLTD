@@ -190,4 +190,53 @@ document.addEventListener("DOMContentLoaded", function () {
     // 初始化第一张
     secondCurrentSlide.querySelector('.second-img').src = secondImages[secondCurrentIndex];
     updateIndicators(secondCurrentIndex);
+});
+
+// 导航栏弹窗监听
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("contactModal");
+    const trigger = document.getElementById("contactTrigger");
+    const closeBtn = document.querySelector(".close-button");
+  
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.style.display = "flex";
+    });
+  
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+});
+
+//认证书高清弹窗
+
+function openModal(imageSrc) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.style.display = "flex";
+  modalImg.src = imageSrc;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("imageModal");
+  const closeBtn = document.querySelector(".close-image-modal");
+
+  // 关闭按钮点击关闭
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
   });
+
+  // 点击背景关闭
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+  

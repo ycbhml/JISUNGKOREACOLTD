@@ -80,13 +80,44 @@
                 <nav class="Biaoqian"><!-- 导航栏右边 -->
                     <ul>
                         <li><a href="javascript:void(0);" onclick="window.scrollTo({ top: 1250, behavior: 'smooth' });">우리회사</a></li>
-                        <li><a href="#product">제품소개</a></li>
+                        <li><a href="product.html">제품소개</li>
                         <li><a href="#notice">공지사항</a></li>
-                        <li><a href="#contact">문의하기</a></li>
+                        <li><a href="#" id="contactTrigger">문의하기</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+
+        <!-- 문의하기弹窗结构 -->
+        <div id="contactModal" class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+          
+            <div class="icon-row">
+              <div class="icon-wrapper">
+                <img src="Header/phone.png" alt="전화" class="contact-icon">
+                <div class="tooltip">전화번호: 010-5053-2308<br>영업시간: 오전8시~오후18시</div>
+              </div>
+          
+              <div class="icon-wrapper">
+                <img src="Header/Email.png" alt="이메일" class="contact-icon">
+                <div class="tooltip">이메일: jisungkoreacoltd@hotmail.com</div>
+              </div>
+          
+              <div class="icon-wrapper">
+                <img src="Header/kt.png" alt="카카오톡" class="contact-icon">
+                <div class="tooltip">
+                  <img src="Header/kakaoba.png" alt="카카오톡 QR" class="qr-image">
+                  <img src="Header/kakaoma.jpg" alt="카카오톡 QR" class="qr-image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+
 
         <!-- 左右切换按钮 -->
         <button class="bg-btn left-btn">
@@ -187,6 +218,41 @@
       </section>
 
 
+      <!-- FDA 승인证书版块 -->
+      <section class="fda-approval-section">
+        <div class="fda-container">
+          <div class="title-box">
+            <div class="title-line"></div>
+            <div class="title-text">
+              <h2>미국식품안전청(FDA)승인</h2>
+              <p>해썹 인증! SGS 인증!</p>
+            </div>
+          </div>
+      
+          <div class="certificate-gallery">
+            <div class="certificate-item">
+              <img src="FDA/renzheng1.png" alt="FDA Certificate 1" onclick="openModal('FDA/renzheng1.png')">
+            </div>
+            <div class="certificate-item">
+              <img src="FDA/renzheng2.jpeg" alt="FDA Certificate 2" onclick="openModal('FDA/renzheng2.jpeg')">
+            </div>
+            <div class="certificate-item">
+              <img src="FDA/renzheng3.png" alt="FDA Certificate 3" onclick="openModal('FDA/renzheng3.png')">
+            </div>
+            <div class="certificate-item">
+              <img src="FDA/renzheng4.png" alt="FDA Certificate 4" onclick="openModal('FDA/renzheng4.png')">
+            </div>
+          </div>
+        </div>
+        
+        <!-- ✅ 全屏弹出模态框结构 -->
+        <div id="imageModal" class="image-modal">
+          <span class="close-image-modal">&times;</span>
+          <img class="modal-content-image" id="modalImage">
+        </div>
+
+      </section>
+      
 
       <section class="partner-showcase">
         <h2>전략적 협력 파트너</h2>
@@ -219,7 +285,7 @@
 
       <section class="platform-section">
         <h2 class="platform-main-title">온라인 스토어</h2>
-      
+        
         <div class="platform-container">
           <!-- Naver Smartstore -->
           <a href="https://smartstore.naver.com/jisungkoreacoltd/category/50001878?cp=1" target="_blank" class="platform-link">
@@ -231,6 +297,8 @@
             <img src="Link/Coupang.png" alt="Coupang" class="platform-logo">
           </a>
         </div>
+
+        <h2 class="platform-main-title2">클릭 시 스토어 바로 이동</h2>
       </section>
 
     <!-- 第二部分幻灯片 -->
