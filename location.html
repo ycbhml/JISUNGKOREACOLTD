@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 设置网页的字符编码为 UTF-8，确保支持韩文、中文、英文等多语言字符显示。-->
+    <meta charset="UTF-8">
+
+    <!-- 设置响应式视图，适配不同设备宽度（如手机、平板、电脑）。width=device-width: 页面宽度随设备宽度变化；initial-scale=1.0: 初始缩放比例为 1-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 网页标题栏上显示的文字：“지성코리아”（公司名）-->
+    <title>지성코리아</title>
+
+    <!-- 设置网站图标，显示在浏览器标签页上-->
+    <link rel="icon" href="logo/logo.png" type="image/png">
+
+    <!-- 引入 CSS 样式文件，控制网页外观-->
+    <link rel="stylesheet" href="location.css">
+
+    <!-- 引入 JS，控制网JS-->
+    <script src="location.js"></script>
+
+    <!-- 判断设备类型的 JavaScript 脚本-->
+    <!-- 监听网页加载完成后执行，判断窗口宽度是否小于等于 768px（常用移动设备宽度上限），给 <body> 标签加上对应的 class：mobile 或 desktop-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function isMobileDevice() {
+                return (window.innerWidth <= 768);
+            }
+
+            if (isMobileDevice()) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.add('desktop');
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <section class="fullscreen-bg"><!-- 背景 -->
+        <div class="slide-wrapper"><!-- 包裹背景图用于滑动切换的div -->
+            <div class="slide current"></div>
+            <div class="slide next"></div>
+        </div>
+
+        <header class="site-header"><!-- 头 -->
+            <div class="DaoHang"><!-- 导航栏 -->
+                <div class="logo-JiSungKorea"><!-- 导航栏左边 -->
+                    <img src="logo/logo.png" alt="지성코리아 로고" class="logo-img">
+                    <span class="Gongsi_name">지성코리아</span>
+                </div>
+
+                <nav class="Biaoqian"><!-- 导航栏右边 -->
+                    <ul>
+                        <li><a href="index.html">우리회사</a></li>
+                        <li><a href="product.html">제품소개</li>
+                        <li><a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">오프직구</a></li>
+                        <li><a href="#" id="contactTrigger">문의하기</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 문의하기弹窗结构 -->
+        <div id="contactModal" class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+          
+            <div class="icon-row">
+              <div class="icon-wrapper">
+                <img src="Header/phone.png" alt="전화" class="contact-icon">
+                <div class="tooltip">전화번호: 010-5053-2308<br>영업시간: 오전8시~오후18시</div>
+              </div>
+          
+              <div class="icon-wrapper">
+                <img src="Header/Email.png" alt="이메일" class="contact-icon">
+                <div class="tooltip">이메일: jisungkoreacoltd@hotmail.com</div>
+              </div>
+          
+              <div class="icon-wrapper">
+                <img src="Header/kt.png" alt="카카오톡" class="contact-icon">
+                <div class="tooltip">
+                  <img src="Header/kakaoba.png" alt="카카오톡 QR" class="qr-image">
+                  <img src="Header/kakaoma.jpg" alt="카카오톡 QR" class="qr-image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+
+
+        <!-- 左右切换按钮 -->
+        <button class="bg-btn left-btn">
+            <img src="background/Left_Buttom.png" alt="이전" class="arrow-img">
+        </button>
+        
+        <button class="bg-btn right-btn">
+            <img src="background/Right_Buttom.png" alt="다음" class="arrow-img">
+        </button>
+
+        <!-- 左右图片对应的文字 -->
+        <div class="text-wrapper">
+            <div class="slide-text" id="slideText">定位</div>
+        </div>
+
+        <!-- 图片进度条 -->
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progressText">1/3</div> <!-- 进度条后面的百分比 -->
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2>장어 대표로 오시는 길</h2>
+        <iframe src="https://map.naver.com/v5/entry/place/1707647100?c=14124845.7090651,4516267.5662674,15,0,0,0,dh"  
+            width="100%" 
+            height="800" 
+            frameborder="0" 
+            style="border:0;" 
+            allowfullscreen 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+
+    <!-- 第二部分幻灯片 -->
+    <section class="second-slider">
+        <div class="second-slide-wrapper">
+          <div class="second-slide current">
+            <img src="PPT/slide1.png" class="second-img" />
+          </div>
+          <div class="second-slide next">
+            <img src="" class="second-img" />
+          </div>
+        </div>
+      
+        <div class="second-indicators">
+          <button class="indicator-btn" data-index="0">1</button>
+          <button class="indicator-btn" data-index="1">2</button>
+          <button class="indicator-btn" data-index="2">3</button>
+          <button class="indicator-btn" data-index="3">4</button>
+        </div>
+    </section>
+
+    <!-- 底部部分 -->
+    <footer>
+        <div class="dibu">
+            <p>&copy; 2024지성코리아</p>
+            <p>상호:지성코리아 | 대표자: 요지성 | 사업자 등록번호: 709-86-02846 </p>
+            <p>전화: 010-5053-2308 | 팩스: 0504-383-2308 | 주소:인천광역시 서구 청라한내로72번길7-31,A동219호</p>
+            <p>개인정보관리책임자: 요지성(jisungkoreacoltd@hotmail.com) | Contact: jisungkoreacoltd@hotmail.com for more information</p>
+            <p>Copyright © 지성코리아 All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
