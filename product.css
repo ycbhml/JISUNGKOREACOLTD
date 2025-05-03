@@ -244,38 +244,36 @@ height: 120px;
 /* 控制淡入淡出的文本部分 */
 .text-wrapper {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  align-items: center;     /* ✅ 永远垂直居中 */
-  justify-content: center; /* ✅ 永远水平居中 */
-  pointer-events: none;
+  flex-direction: column; /* 垂直排列内容 */
+  align-items: center;
   z-index: 15;
+  pointer-events: none;
 }
+
 .slide-text {
   font-size: 3rem;
   color: white;
   text-align: center;
   opacity: 0;
-  transform: translate(-50%, -50%); /* ✅ 初始就是正中心 */
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  position: absolute; /* ✅ 让自己绝对定位控制位置 */
-  top: 50%;
-  left: 50%;
+  transition: opacity 0.8s ease;
+  margin-bottom: 30px; /* 与按钮之间留出空间 */
+  pointer-events: auto;
 }
-/* 显示文字时 */
+
 .slide-text.show {
   opacity: 1;
-  transform: translateY(0px);
 }
+
 
 /* 控制图片进度条 */
 .progress-bar-wrapper {
   position: absolute;
-  top: 80%; /* 和之前进度条一样 */
-  left: 30%;
+  top: 82%; /* 和之前进度条一样 */
+  left: 20%;
   transform: translateX(-50%);
   display: flex; /* ✅ 用flex让条子和文字一行排列 */
   align-items: center;
@@ -303,7 +301,35 @@ height: 120px;
   font-weight: bold;
 }
 
+/* 购买按钮的链接------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.buy-buttons {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 15;
+  width: 350px;     /* ✅ 设定总宽度 */
+}
 
+.buy-button {
+  flex: 1;          /* ✅ 每个按钮平均占据一半 */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
 
 /* 运输流程------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 

@@ -24,14 +24,27 @@ function updateProgressBar(index, total) {
 
 // 背景切换监听
 document.addEventListener("DOMContentLoaded", function () {
+  // 换图
   const images = [
       "background/background21.png",
       "background/background22.png"
   ];
 
+  // 换字
   const texts = [
       { text: "민물장어 양념구이", offsetX: 800, offsetY: 300, color: "#ffffff" }, // 中间上方
       { text: "민물장어 냉동필렛", offsetX: 800, offsetY: 300, color: "#000000" }
+  ];
+
+  const buyLinks = [
+    {
+      naver: "https://smartstore.naver.com/jisungkoreacoltd/products/11298758741",
+      coupang: "https://www.coupang.com/vp/products/8730769933?itemId=25368450598&lptag=A01278110&redirect=landing&searchId=e247856481bf4e59830f993f58806d6b&sourceType=brandstore-baseline_list&spec=10799999&src=1139998&storeId=210397&subSourceType=brandstore-baseline_list&vendorId=A01278110&vendorItemId=92362636467&wPcid=69493251954001727789044&isAddedCart="
+    },
+    {
+      naver: "https://smartstore.naver.com/jisungkoreacoltd/products/11298847124",
+      coupang: "https://www.coupang.com/vp/products/8615568014?itemId=25366689172&lptag=A01278110&redirect=landing&searchId=e247856481bf4e59830f993f58806d6b&sourceType=brandstore-baseline_list&spec=10799999&src=1139998&storeId=210397&subSourceType=brandstore-baseline_list&vendorId=A01278110&vendorItemId=92360907882&wPcid=69493251954001727789044&isAddedCart="
+    }
   ];
 
   let currentIndex = 0;
@@ -52,9 +65,23 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 300);
   }
 
+  function updateBuyButtons(index) {
+    const btn1 = document.getElementById("buyBtn1");
+    const btn2 = document.getElementById("buyBtn2");
+    if (buyLinks[index]) {
+      btn1.href = buyLinks[index].naver;
+      btn2.href = buyLinks[index].coupang;
+    }
+  }
+
   function showSlide(nextIndex, direction = 'right') {
       if (isAnimating) return;
       isAnimating = true;
+
+
+      // 更新按钮链接
+      updateBuyButtons(nextIndex);
+      updateText(nextIndex);
 
       nextSlide.style.backgroundImage = `url('${images[nextIndex]}')`;
       nextSlide.style.transition = 'none';
@@ -87,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
           isAnimating = false;
       }, 600);
 
-      updateText(nextIndex);
   }
 
   function startAutoSlide() {
@@ -117,6 +143,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // 初始化第一张图和文字
   currentSlide.style.backgroundImage = `url('${images[currentIndex]}')`;
   updateText(currentIndex);
+
+  //确保初始按钮链接正确
+  updateBuyButtons(currentIndex);
+  
   startAutoSlide(); // 🆕 页面加载完后开始自动轮播
 });
 

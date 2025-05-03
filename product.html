@@ -39,78 +39,85 @@
 <body>
     <!-- 头部部分 -->
     <section class="fullscreen-bg"><!-- 背景 -->
-        <div class="slide-wrapper"><!-- 包裹背景图用于滑动切换的div -->
-            <div class="slide current"></div>
-            <div class="slide next"></div>
-        </div>
+      <div class="slide-wrapper"><!-- 包裹背景图用于滑动切换的div -->
+        <div class="slide current"></div>
+        <div class="slide next"></div>
+      </div>
 
-        <header class="site-header"><!-- 头 -->
-            <div class="DaoHang"><!-- 导航栏 -->
-                <div class="logo-JiSungKorea"><!-- 导航栏左边 -->
-                    <img src="logo/logo.png" alt="지성코리아 로고" class="logo-img">
-                    <span class="Gongsi_name">지성코리아</span>
-                </div>
-
-                <nav class="Biaoqian"><!-- 导航栏右边 -->
-                    <ul>
-                        <li><a href="index.html">우리회사</a></li>
-                        <li><a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">제품소개</a></li>
-                        <li><a href="#notice">공지사항</a></li>
-                        <li><a href="#" id="contactTrigger">문의하기</a></li>
-                    </ul>
-                </nav>
+      <header class="site-header"><!-- 头 -->
+        <div class="DaoHang"><!-- 导航栏 -->
+            <div class="logo-JiSungKorea"><!-- 导航栏左边 -->
+                <img src="logo/logo.png" alt="지성코리아 로고" class="logo-img">
+                <span class="Gongsi_name">지성코리아</span>
             </div>
-        </header>
 
-        <!-- 문의하기弹窗结构 -->
-        <div id="contactModal" class="modal">
-          <div class="modal-content">
-            <span class="close-button">&times;</span>
-          
-            <div class="icon-row">
-              <div class="icon-wrapper">
-                <img src="Header/phone.png" alt="전화" class="contact-icon">
-                <div class="tooltip">전화번호: 010-5053-2308<br>영업시간: 오전8시~오후18시</div>
-              </div>
-          
-              <div class="icon-wrapper">
-                <img src="Header/Email.png" alt="이메일" class="contact-icon">
-                <div class="tooltip">이메일: jisungkoreacoltd@hotmail.com</div>
-              </div>
-          
-              <div class="icon-wrapper">
-                <img src="Header/kt.png" alt="카카오톡" class="contact-icon">
-                <div class="tooltip">
-                  <img src="Header/kakaoba.png" alt="카카오톡 QR" class="qr-image">
-                  <img src="Header/kakaoma.jpg" alt="카카오톡 QR" class="qr-image">
-                </div>
+            <nav class="Biaoqian"><!-- 导航栏右边 -->
+                <ul>
+                    <li><a href="index.html">우리회사</a></li>
+                    <li><a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">제품소개</a></li>
+                    <li><a href="#notice">공지사항</a></li>
+                    <li><a href="#" id="contactTrigger">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+      </header>
+
+      <!-- 문의하기弹窗结构 -->
+      <div id="contactModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+        
+          <div class="icon-row">
+            <div class="icon-wrapper">
+              <img src="Header/phone.png" alt="전화" class="contact-icon">
+              <div class="tooltip">전화번호: 010-5053-2308<br>영업시간: 오전8시~오후18시</div>
+            </div>
+        
+            <div class="icon-wrapper">
+              <img src="Header/Email.png" alt="이메일" class="contact-icon">
+              <div class="tooltip">이메일: jisungkoreacoltd@hotmail.com</div>
+            </div>
+        
+            <div class="icon-wrapper">
+              <img src="Header/kt.png" alt="카카오톡" class="contact-icon">
+              <div class="tooltip">
+                <img src="Header/kakaoba.png" alt="카카오톡 QR" class="qr-image">
+                <img src="Header/kakaoma.jpg" alt="카카오톡 QR" class="qr-image">
               </div>
             </div>
           </div>
         </div>
-        
+      </div>
 
-        <!-- 左右切换按钮 -->
-        <button class="bg-btn left-btn">
-            <img src="background/Left_Buttom.png" alt="이전" class="arrow-img">
-        </button>
-        
-        <button class="bg-btn right-btn">
-            <img src="background/Right_Buttom.png" alt="다음" class="arrow-img">
-        </button>
+      <!-- 左右切换按钮 -->
+      <button class="bg-btn left-btn">
+        <img src="background/Left_Buttom.png" alt="이전" class="arrow-img">
+      </button>
+    
+      <button class="bg-btn right-btn">
+          <img src="background/Right_Buttom.png" alt="다음" class="arrow-img">
+      </button>
 
-        <!-- 左右图片对应的文字 -->
-        <div class="text-wrapper">
-            <div class="slide-text" id="slideText">定位</div>
-        </div>
+      <!-- 左右图片对应的文字 -->
+      <div class="text-wrapper">
+        <div class="slide-text" id="slideText">定位</div>
+      </div>
 
-        <!-- 图片进度条 -->
-        <div class="progress-bar-wrapper">
-            <div class="progress-bar-container">
-                <div class="progress-bar"></div>
-            </div>
-            <div class="progress-text" id="progressText">1/3</div> <!-- 进度条后面的百分比 -->
-        </div>
+      <!-- 图片进度条 -->
+      <div class="progress-bar-wrapper">
+          <div class="progress-bar-container">
+              <div class="progress-bar"></div>
+          </div>
+          <div class="progress-text" id="progressText">1/3</div> <!-- 进度条后面的百分比 -->
+      </div>
+
+
+      <!-- 购买按钮 -->
+      <div class="buy-buttons">
+        <a id="buyBtn1" class="buy-button" href="#" target="_blank">NAVER 구매</a>
+        <a id="buyBtn2" class="buy-button" href="#" target="_blank">COUPANG 구매</a>
+      </div>
+
     </section>
 
     <section class="process-section">
