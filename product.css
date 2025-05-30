@@ -262,6 +262,7 @@ height: 120px;
   transition: opacity 0.8s ease;
   margin-bottom: 30px; /* 与按钮之间留出空间 */
   pointer-events: auto;
+  font-family:"Gulim"
 }
 
 .slide-text.show {

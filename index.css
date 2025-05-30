@@ -264,7 +264,9 @@ html {
     position: absolute; /* ✅ 让自己绝对定位控制位置 */
     top: 50%;
     left: 50%;
+    font-family:"Gulim"
 }
+
 /* 显示文字时 */
 .slide-text.show {
     opacity: 1;
