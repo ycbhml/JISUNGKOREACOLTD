@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const texts = [
         { text: "안녕하세요？<br><br>지성코리아 입니다!!!", offsetX: -500, offsetY: 0, color: "#ffffff" }, // 中间上方
         { text: "아시아를 넘어 세계로<br><br>최대 규모 장어 양식장입니다!", offsetX: -500, offsetY: -250, color: "#000000" }, // 正中
-        { text: "믿을 수 있는 품질!<br><br>가장 깨끗하고, 최대 규모, 최고 전문성의 장어 식품 생산 라인!", offsetX: 500, offsetY: -300, color: "#000000" } // 中间下方
+        { text: "믿을 수 있는 품질!<br><br>가장 깨끗하고, 최대 규모, 최고 전문성의<br>장어 식품 생산 라인!", offsetX: 500, offsetY: -300, color: "#000000" } // 中间下方
     ];
 
     let currentIndex = 0;
