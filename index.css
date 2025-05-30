@@ -754,8 +754,6 @@ html {
     color: white;
 }
 
-
-
 /* 底部开始------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 footer {
     background-color: #111; /* 深灰接近黑色背景 */
@@ -773,4 +771,356 @@ footer {
 
 .dibu p {
     margin: 5px 0;          /* 每行上下间距 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 手机端------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1400px) {
+  /* 导航栏 */
+  .site-header {
+    padding: 15px 0;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .DaoHang {
+  flex-direction: column;
+  align-items: center;           /* ✅ 水平居中！ */
+  width: 100%;
+  max-width: 100% !important;
+  padding: 0 12px;
+  box-sizing: border-box;
+  }
+
+  .logo-JiSungKorea {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .Gongsi_name {
+    font-size: 1.5rem;
+  }
+
+  .Biaoqian ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;    /* ✅ 四项间隔自动撑满，左右均衡 */
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 6vw;                          /* ✅ 每项之间加入自适应间距 */
+  }
+
+  .Biaoqian li {
+    flex: 1 1 0%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .Biaoqian a {
+    display: block;
+    padding: 10px 5px;
+    font-size: clamp(12px, 3.5vw, 16px);
+    word-break: keep-all;
+  }
+  /* 导航栏的문의하기弹窗控制 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+  }
+
+  .icon-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s;
+  }
+
+  .contact-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .tooltip {
+    font-size: 10px;   /* ✅ 原来默认大约是14~16px，现在变小一点 */
+    line-height: 1.4;  /* ✅ 让多行内容更紧凑但仍可读 */
+  }
+
+  /* 导航栏的문의하기2级菜单弹窗控制 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  /* 图标包裹容器 */
+  .icon-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* 提示气泡初始隐藏 */
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 110%; /* 在图片上方弹出 */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 100;
+    transition: opacity 0.3s;
+  }
+
+  /* 悬停时显示气泡 */
+  .icon-wrapper:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* 二维码图片尺寸控制 */
+  .tooltip img.qr-image {
+    width: 70px;
+    height: 70px;
+  }
+
+
+  /* 主页的大图片背景开始------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+  .slide {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f8fbff;
+  }
+
+  .fullscreen-bg {
+    height: 60vh;   /* 可根据情况调高 */
+  }
+  .slide-text {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);   /* ✅ 字体缩小适配 */
+    max-width: 90vw;
+    transform: translate(-50%, -50%) !important;  /* ✅ 正中心固定 */
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .left-btn {
+    left: 15px;    /* ✅ 缩小左右按钮距离 */
+  }
+
+  .right-btn {
+    right: 15px;
+  }
+
+  .arrow-img {
+    width: 30px;   /* ✅ 缩小箭头图标 */
+  }
+
+  .progress-bar-wrapper {
+    top: 85%;               /* ✅ 略下移进度条 */
+    left: 50%;              /* ✅ 居中 */
+    transform: translateX(-50%);
+    flex-direction: column; /* ✅ 如果太挤可改为垂直排列 */
+    gap: 5px;
+  }
+
+  .progress-text {
+    font-size: 13px;
+  }
+
+  .progress-bar-container {
+    width: 200px;   /* ✅ 缩小宽度适配小屏 */
+  }
+
+  .progress-bar {
+  background-color: #000000;   /* ← 就是这个颜色控制条的颜色 */
+  }
+
+  .progress-bar-container {
+  background-color: rgba(255, 255, 255, 0.3); /* ← 改这里可以让背景灰或透明 */
+  }
+  .progress-text {
+    font-size: 16px;
+    color: #000000; /* 文字颜色，可以换 */
+    font-weight: bold;
+  }
+
+
+  /* 关于我们公司介绍开始--------------------调用的pc端js 没有更改------------------------------------------------------------------*/
+
+  /* 产业优势---------------------------------------------------------------------------------------------------------------------*/
+
+  .industry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* ✅ 每行不足3个时自动居中 */
+    gap: 12px;                 /* ✅ 卡片之间的间距 */
+    padding: 0 10px;
+  }
+
+  .industry-card {
+    width: 30%;                /* ✅ 固定宽度，最多每排3个 */
+    max-width: 180px;          /* ✅ 防止超出 */
+    min-width: 100px;          /* ✅ 防止太小 */
+    box-sizing: border-box;
+    flex-grow: 0;              /* ✅ 不自动拉伸 */
+    flex-shrink: 0;            /* ✅ 不被压缩 */
+    text-align: center;
+  }
+
+
+  .industry-card img {
+    height: auto;               /* ✅ 图片高度自适应 */
+    max-height: 200px;          /* ✅ 控制最大高度，避免过高 */
+  }
+
+  .industry-card h3 {
+    font-size: 15px;            /* ✅ 字体稍小 */
+    margin: 10px 0 4px;
+  }
+
+  .industry-card p {
+    font-size: 13px;            /* ✅ 描述更清晰 */
+    margin-bottom: 12px;
+  }
+
+  .industry-title .title-text h2 {
+    font-size: 20px;            /* ✅ 标题整体缩小 */
+  }
+
+  .industry-title .title-text p {
+    font-size: 12px;
+  }
+
+  .industry-title {
+    flex-direction: column;     /* ✅ 标题图标与文字纵向排列 */
+    align-items: flex-start;
+  }
+
+
+  /* 证书---------------------------------------------------------------------------------------------------------------------*/
+  .fda-approval-section {
+    padding: 60px 0;  /* ✅ 缩小上下边距 */
+  }
+
+  .fda-container {
+    padding: 0 12px;  /* ✅ 缩小左右内边距 */
+  }
+
+  .certificate-gallery {
+    justify-content: center;       /* ✅ 居中展示每排 */
+    gap: 16px;
+  }
+
+  .certificate-item {
+    flex: 0 0 45%;                  /* ✅ 每排显示两个 */
+    max-width: 45%;
+  }
+
+  .certificate-item img {
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+  }
+
+  /* 标题缩小 */
+  .title-text h2 {
+    font-size: 20px;
+  }
+
+  .title-text p {
+    font-size: 13px;
+  }
+
+
+  /* 幻灯片和底部调用pc---------------------------------------------------------------------------------------------------------------------*/
 }
