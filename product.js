@@ -42,11 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const buyLinks = [
     {
-      naver: "https://smartstore.naver.com/jisungkoreacoltd/products/11298758741",
+      naver: "https://smartstore.naver.com/jisungkoreacoltd",
       coupang: "https://shop.coupang.com/A01278110?platform=p&brandId=0"
     },
     {
-      naver: "https://smartstore.naver.com/jisungkoreacoltd/products/11298847124",
+      naver: "https://smartstore.naver.com/jisungkoreacoltd",
       coupang: "https://shop.coupang.com/A01278110?platform=p&brandId=0"
     }
   ];
