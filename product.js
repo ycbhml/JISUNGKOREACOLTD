@@ -43,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const buyLinks = [
     {
       naver: "https://smartstore.naver.com/jisungkoreacoltd/products/11298758741",
-      coupang: "https://www.coupang.com/vp/products/8730769933?itemId=25368450598&lptag=A01278110&redirect=landing&searchId=e247856481bf4e59830f993f58806d6b&sourceType=brandstore-baseline_list&spec=10799999&src=1139998&storeId=210397&subSourceType=brandstore-baseline_list&vendorId=A01278110&vendorItemId=92362636467&wPcid=69493251954001727789044&isAddedCart="
+      coupang: "https://shop.coupang.com/A01278110?platform=p&brandId=0"
     },
     {
       naver: "https://smartstore.naver.com/jisungkoreacoltd/products/11298847124",
-      coupang: "https://www.coupang.com/vp/products/8615568014?itemId=25366689172&lptag=A01278110&redirect=landing&searchId=e247856481bf4e59830f993f58806d6b&sourceType=brandstore-baseline_list&spec=10799999&src=1139998&storeId=210397&subSourceType=brandstore-baseline_list&vendorId=A01278110&vendorItemId=92360907882&wPcid=69493251954001727789044&isAddedCart="
+      coupang: "https://shop.coupang.com/A01278110?platform=p&brandId=0"
     }
   ];
 
