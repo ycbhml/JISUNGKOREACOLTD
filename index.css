@@ -932,7 +932,7 @@ footer {
   }
 
   .tooltip {
-    font-size: 10px;   /* ✅ 原来默认大约是14~16px，现在变小一点 */
+    font-size: 15px;   /* ✅ 原来默认大约是14~16px，现在变小一点 */
     line-height: 1.4;  /* ✅ 让多行内容更紧凑但仍可读 */
   }
 
@@ -969,8 +969,8 @@ footer {
 
   /* 二维码图片尺寸控制 */
   .tooltip img.qr-image {
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
   }
 
 

@@ -27,13 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // 换图
   const images = [
       "background/background21.png",
-      "background/background22.png"
+      "background/background22.png",
+      "background/background23.png",
+      "background/background24.png"
   ];
 
   // 换字
   const texts = [
       { text: "민물장어 양념구이", offsetX: 800, offsetY: 300, color: "#ffffff" }, // 中间上方
-      { text: "민물장어 냉동필렛", offsetX: 800, offsetY: 300, color: "#000000" }
+      { text: "민물장어 냉동필렛", offsetX: 800, offsetY: 300, color: "#000000" }, 
+      { text: "민물 활장어", offsetX: 800, offsetY: 300, color: "#ffffff" },
+      { text: "생강채", offsetX: 800, offsetY: 300, color: "#000000" }
   ];
 
   const buyLinks = [
