@@ -129,7 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "PPT/slide1.png",
       "PPT/slide2.jpg",
       "PPT/slide3.jpg",
-      "PPT/slide4.jpg"
+      "PPT/slide4.jpg",
+      "PPT/slide5.jpg"
     ];
   
     let secondCurrentIndex = 0;
@@ -190,6 +191,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // 初始化第一张
     secondCurrentSlide.querySelector('.second-img').src = secondImages[secondCurrentIndex];
     updateIndicators(secondCurrentIndex);
+
+
+    // 幻灯片轮播代码
+    function startAutoPlay() {
+      setInterval(() => {
+        const nextIndex = (secondCurrentIndex + 1) % secondImages.length;
+        showSecondSlide(nextIndex, 'right');
+      }, 5000);
+    }
+    startAutoPlay();
 });
 
 // 导航栏弹窗监听
@@ -240,3 +251,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
   
+
