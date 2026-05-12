@@ -84,9 +84,123 @@ html {
   color: #007bff;                        /* 鼠标悬停时字体颜色变为蓝色 */
 }
 
-
-
 /* 导航栏的문의하기弹窗控制 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* 遮罩层 */
+.contact-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+/* 打开状态 */
+.contact-modal.show {
+  display: flex;
+}
+
+/* 弹窗主体 */
+.contact-modal-content {
+  width: 380px;
+  max-width: 90%;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 关闭按钮 */
+.contact-close-button {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 24px;
+  line-height: 1;
+  color: #888;
+  cursor: pointer;
+}
+
+.contact-close-button:hover {
+  color: #111;
+}
+
+/* 整体列表 */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+/* 每一行 */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* 图标 */
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* 文字区 */
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.contact-text .main-text {
+  font-size: 15px;
+  color: #222;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.contact-text .sub-text {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+/* Kakao 行 */
+.contact-kakao-item {
+  align-items: flex-start;
+}
+
+/* 二维码区域 */
+.kakao-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 二维码图片 */
+.qr-image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* 导航栏的老문의하기弹窗控制 -----------
 .modal {
 display: none;
 position: fixed;
@@ -133,15 +247,12 @@ transition: transform 0.3s;
 .contact-icon:hover {
 transform: scale(1.1);
 }
-
-/* 导航栏的문의하기2级菜单弹窗控制 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* 图标包裹容器 */
+--*/
+/* 导航栏的문의하기2级菜单弹窗控制 ----------------
 .icon-wrapper {
 position: relative;
 display: inline-block;
 }
-
-/* 提示气泡初始隐藏 */
 .tooltip {
 visibility: hidden;
 opacity: 0;
@@ -151,26 +262,22 @@ text-align: center;
 padding: 8px 12px;
 border-radius: 6px;
 position: absolute;
-bottom: 110%; /* 在图片上方弹出 */
+bottom: 110%; 
 left: 50%;
 transform: translateX(-50%);
 white-space: nowrap;
 z-index: 100;
 transition: opacity 0.3s;
 }
-
-/* 悬停时显示气泡 */
 .icon-wrapper:hover .tooltip {
 visibility: visible;
 opacity: 1;
 }
-
-/* 二维码图片尺寸控制 */
 .tooltip img.qr-image {
 width: 120px;
 height: 120px;
 }
-
+-------*/
 
 
 

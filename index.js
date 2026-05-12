@@ -203,27 +203,55 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoPlay();
 });
 
-// 导航栏弹窗监听
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("contactModal");
-    const trigger = document.getElementById("contactTrigger");
-    const closeBtn = document.querySelector(".close-button");
+// 导航栏弹窗监听{老联系方式弹窗}
+// document.addEventListener("DOMContentLoaded", function () {
+//     const modal = document.getElementById("contactModal");
+//     const trigger = document.getElementById("contactTrigger");
+//     const closeBtn = document.querySelector(".close-button");
   
+//     trigger.addEventListener("click", function (e) {
+//       e.preventDefault();
+//       modal.style.display = "flex";
+//     });
+  
+//     closeBtn.addEventListener("click", function () {
+//       modal.style.display = "none";
+//     });
+  
+//     window.addEventListener("click", function (e) {
+//       if (e.target === modal) {
+//         modal.style.display = "none";
+//       }
+//     });
+// });
+
+// 新联系方式弹窗
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("contactModal");
+  const trigger = document.getElementById("contactTrigger");
+  const closeBtn = document.querySelector(".contact-close-button");
+
+  if (trigger && modal && closeBtn) {
+    // 打开弹窗
     trigger.addEventListener("click", function (e) {
       e.preventDefault();
-      modal.style.display = "flex";
+      modal.classList.add("show");
     });
-  
+
+    // 点击关闭按钮
     closeBtn.addEventListener("click", function () {
-      modal.style.display = "none";
+      modal.classList.remove("show");
     });
-  
-    window.addEventListener("click", function (e) {
+
+    // 点击遮罩关闭
+    modal.addEventListener("click", function (e) {
       if (e.target === modal) {
-        modal.style.display = "none";
+        modal.classList.remove("show");
       }
     });
+  }
 });
+
 
 //认证书高清弹窗
 
