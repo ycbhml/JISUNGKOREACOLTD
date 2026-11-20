@@ -2,7 +2,7 @@
 翻版盗用必究
 
 运行实例：
-https://jisungkorea.com
+https://jisungkorea.com/运行ing
 https://jisungkoreacoltd.com/已废弃
 
 商店运行实例：
