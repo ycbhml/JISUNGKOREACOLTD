@@ -2,7 +2,8 @@
 翻版盗用必究
 
 运行实例：
-https://jisungkoreacoltd.com/
+https://jisungkorea.com
+https://jisungkoreacoltd.com/已废弃
 
 商店运行实例：
 1.NAVER:https://smartstore.naver.com/jisungkoreacoltd/category/50001878?cp=1
